@@ -1,0 +1,296 @@
+/* styles.css */
+/* Estilos generales para el CRUD de Hermes */
+/* Creado por Claude IA - 06/03/2025 */
+
+/* Reseteo básico para quitar márgenes y rellenos por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Variables de colores en formato root para facilitar cambios futuros */
+:root {
+    --color-primario: #6b8e23; /* Verde oliva, color relajado y natural */
+    --color-secundario: #f5f5dc; /* Beige, color suave para fondos */
+    --color-acento: #8fbc8f; /* Verde marino, para botones y elementos interactivos */
+    --color-texto: #333333; /* Gris oscuro para texto principal */
+    --color-fondo: #f8f8f8; /* Gris muy claro para el fondo general */
+    --color-borde: #ddd; /* Gris claro para bordes */
+    --color-exito: #4caf50; /* Verde para mensajes de éxito */
+    --color-error: #f44336; /* Rojo para mensajes de error */
+    --color-hover: #556b2f; /* Verde oliva más oscuro para hover */
+}
+
+/* Estilos del cuerpo de la página */
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Encabezados */
+h1, h2 {
+    color: var(--color-primario);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-borde);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.2em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+/* Navegación */
+nav {
+    background-color: var(--color-secundario);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-primario);
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--color-acento);
+    color: white;
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+th {
+    background-color: var(--color-primario);
+    color: white;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--color-secundario);
+}
+
+tbody tr:hover {
+    background-color: #e8e8e8;
+}
+
+/* Enlaces dentro de la tabla (ver, editar, eliminar) */
+table a {
+    color: var(--color-primario);
+    text-decoration: none;
+    margin: 0 5px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: var(--color-secundario);
+    transition: all 0.3s ease;
+}
+
+table a:hover {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+/* Formularios */
+form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--color-primario);
+    font-weight: bold;
+}
+
+input[type="text"], 
+input[type="password"],
+input[type="number"],
+select, 
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid var(--color-borde);
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus,
+input[type="number"]:focus,
+select:focus, 
+textarea:focus {
+    border-color: var(--color-acento);
+    outline: none;
+    box-shadow: 0 0 5px rgba(143, 188, 143, 0.5);
+}
+
+input[type="submit"], 
+button {
+    background-color: var(--color-acento);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover, 
+button:hover {
+    background-color: var(--color-hover);
+}
+
+/* Mensajes de éxito y error */
+.mensaje-exito {
+    background-color: var(--color-exito);
+    color: white;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.mensaje-error {
+    background-color: var(--color-error);
+    color: white;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Responsividad básica */
+@media screen and (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    h2 {
+        font-size: 1.4em;
+    }
+}
+
+/* Página específica: Vista detalles */
+.detalles-usuario {
+    border-left: 5px solid var(--color-primario);
+    padding-left: 15px;
+    margin: 20px 0;
+}
+
+/* Iconos básicos con colores integrados - simulación sin imágenes */
+.icono-ver::before {
+    content: "👁️ ";
+}
+
+.icono-editar::before {
+    content: "✏️ ";
+}
+
+.icono-eliminar::before {
+    content: "🗑️ ";
+}
+
+.icono-volver::before {
+    content: "⬅️ ";
+}
+
+/* Contenedor principal para centrar el contenido */
+.contenedor-principal {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Pie de página simple */
+footer {
+    margin-top: 30px;
+    text-align: center;
+    color: var(--color-texto);
+    font-size: 0.9em;
+    padding: 20px;
+    border-top: 1px solid var(--color-borde);
+}
+
+/* Clase para centrar elementos */
+.centrado {
+    text-align: center;
+}
+
+/* // Este es un estilo relajado con colores verdes y beige que dan sensación 
+// de naturaleza y tranquilidad. Perfecto para una interfaz administrativa
+// sin complicaciones. Los bordes redondeados y las sombras suaves le dan 
+// profundidad sin ser muy moderno o recargado.
+// 
+// He incluido comentarios en español para facilitar futuras modificaciones.
+// Las variables CSS permiten cambiar rápidamente los colores si fuera necesario.
+// 
+// Espero que este estilo simple pero efectivo haga que tu CRUD se vea 
+// profesional y agradable a la vista :) */

@@ -73,7 +73,7 @@
                 if ($this->con->consultaSimple($sql)) {
                     return true;
                 } else {
-                    echo "Error al insertar: " . mysqli_error($this->con->getConnection());
+                    //echo "Error al insertar: " . mysqli_error($this->con->getConnection());
                     return false;
                 }
             } else {

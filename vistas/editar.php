@@ -1,5 +1,9 @@
+<head>
+    <link rel="stylesheet" href="../styles.css">
+</head>
 <?php
     include_once("controlador/controlador.php");
+
         // Crear una instancia del controlador de personas
         $controlador = new controladorPersonas();
 

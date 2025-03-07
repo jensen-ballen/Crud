@@ -1,7 +1,9 @@
 <html>
     <head>
         <title>Registrar Usuario</title>
+        <link rel="stylesheet" href="../styles.css">
     </head>
+
     <body>
         <h2>Este es el módulo de crear</h2>
 
@@ -35,7 +37,7 @@
             if ($res) {
                 echo "Usuario creado con éxito";
             } else {
-                echo "Error: el usuario no pudo ser registrado. Verifique que la cédula o usuario no existan.";
+                //echo "Error: el usuario no pudo ser registrado. Verifique que la cédula o usuario no existan.";
             }
         }
         ?>

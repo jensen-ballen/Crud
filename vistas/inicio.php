@@ -20,7 +20,11 @@
 
 ?>
 
+<head>
+    <link rel="stylesheet" href="../styles.css">
+</head>
 <body>
+
     <h1>Página de inicio</h1>
 
     <table border="1">
