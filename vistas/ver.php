@@ -15,7 +15,11 @@
     }
 ?>
 
+<head>
+    <link rel="stylesheet" href="../styles.css">
+</head>
 <table border="1">
+
     <tr>
         <th>Id</th>
         <th>Cédula</th>

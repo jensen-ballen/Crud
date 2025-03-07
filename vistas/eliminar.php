@@ -25,7 +25,11 @@
 }
 ?>
 
+<head>
+    <link rel="stylesheet" href="../styles.css">
+</head>
 <form action="" method="post"> <!-- Formulario para confirmar la eliminación -->
+
     <table border="1">
         <thead>
             <tr>
